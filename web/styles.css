@@ -1,0 +1,38 @@
+body{margin:0;background:#0b1218;color:#dbe7ef;font-family:Segoe UI,Arial}
+.top{display:flex;flex-wrap:wrap;gap:6px;justify-content:space-between;align-items:center;padding:10px 14px;background:#0f1822;border-bottom:1px solid #1c2a37}
+.right>*{margin-left:6px}
+.brand{font-weight:800;letter-spacing:.5px}
+#table{display:grid;place-items:center;gap:10px;padding:12px}
+.seats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;width:100%;max-width:980px}
+.seat{background:#0e1721;border:1px solid #1b2a39;border-radius:10px;padding:8px}
+.name{opacity:.85;margin-bottom:6px}
+.hand{display:flex;flex-wrap:wrap;gap:6px;min-height:102px}
+.card{width:56px;height:84px;border-radius:10px;border:1px solid #0c1116;display:grid;place-items:center;font-weight:800;box-shadow:0 4px 14px rgba(0,0,0,.45)}
+.card.red{background:#ef4444;color:#fff}
+.card.black{background:#111827;color:#e5e7eb}
+.card.green{background:#10b981;color:#071b16}
+.card.blue{background:#2563eb;color:#e0edff}
+.card.joker{background:#fcd34d;color:#111}
+.trick{display:flex;gap:8px;min-height:96px}
+#trumpBox{min-height:30px}
+.bottom{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;padding:10px}
+.panel{background:#0f1822;border:1px solid #1c2a37;border-radius:10px;padding:10px}
+#log{max-height:220px;overflow:auto;background:#0a0f14;padding:8px;border-radius:8px}
+.modal{position:fixed;inset:0;display:grid;place-items:center;background:rgba(0,0,0,.5)}
+.modal .box{background:#0f1822;border:1px solid #1c2a37;border-radius:12px;padding:14px;min-width:280px}
+.controls{margin:10px}
+input,button{background:#122031;color:#eaf2f7;border:1px solid #1c2a37;border-radius:8px;padding:6px 10px}
+button{cursor:pointer}
+
+.back{background:#fcd34d;color:#111}
+
+.card{transition:transform .45s ease, opacity .45s ease, box-shadow .3s ease}
+.card.anim{opacity:0; transform:scale(.9)}
+.card.anim.in{opacity:1; transform:scale(1)}
+.card.from-s0{transform:translateY(28px) scale(.9)}
+.card.from-s1{transform:translateX(28px) scale(.9)}
+.card.from-s2{transform:translateY(-28px) scale(.9)}
+.card.from-s3{transform:translateX(-28px) scale(.9)}
+.trick.fadeout{opacity:.0; transition:opacity .5s ease}
+.seat.active{box-shadow:0 0 0 2px #f59e0b inset, 0 0 10px rgba(245,158,11,.45); animation:pulse 1.6s ease-in-out infinite}
+@keyframes pulse{ 0%{box-shadow:0 0 0 0 #f59e0b inset, 0 0 6px rgba(245,158,11,.3)} 50%{box-shadow:0 0 0 3px #f59e0b inset, 0 0 14px rgba(245,158,11,.6)} 100%{box-shadow:0 0 0 0 #f59e0b inset, 0 0 6px rgba(245,158,11,.3)} }

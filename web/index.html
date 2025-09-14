@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Joker Online PRO</title>
+<link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+<header class="top">
+  <div class="brand">Joker</div>
+  <div class="right">
+    <button id="btnAuth">Войти/Регистрация</button>
+    <button id="btnCreate">Создать стол</button>
+    <input id="roomId" placeholder="ID стола"/>
+    <input id="roomPass" placeholder="Пароль (если приват)"/>
+    <button id="btnJoin">Присоединиться</button>
+  </div>
+</header>
+
+<main id="table">
+  <div id="inviteBox"></div>
+  <div id="status">Ожидание…</div>
+  <div id="trumpBox"></div>
+  <section class="seats">
+    <div class="seat s0"><div class="name" id="n0">—</div><div id="h0" class="hand"></div></div>
+    <div class="seat s1"><div class="name" id="n1">—</div><div id="h1" class="hand"></div></div>
+    <div class="seat s2"><div class="name" id="n2">—</div><div id="h2" class="hand"></div></div>
+    <div class="seat s3"><div class="name" id="n3">—</div><div id="h3" class="hand"></div></div>
+  </section>
+  <section id="trick" class="trick"></section>
+  <div class="controls">
+    <button id="btnStart">Начать кон</button>
+  </div>
+</main>
+
+<section class="bottom">
+  <div class="panel">
+    <h3>Счёт</h3>
+    <div class="scores">
+      <div>Игрок-1: <b id="sc0">0</b></div>
+      <div>Игрок-2: <b id="sc1">0</b></div>
+      <div>Игрок-3: <b id="sc2">0</b></div>
+      <div>Игрок-4: <b id="sc3">0</b></div>
+    </div>
+  </div>
+  <div class="panel">
+    <h3>Журнал</h3>
+    <pre id="log"></pre>
+  </div>
+  <div class="panel">
+    <h3>Лидерборд (топ-10)</h3>
+    <ol id="lb"></ol>
+  </div>
+</section>
+
+<div class="modal" id="authModal" hidden>
+  <div class="box">
+    <h3>Войти / Регистрация</h3>
+    <input id="email" placeholder="Email"/>
+    <input id="password" placeholder="Пароль" type="password"/>
+    <input id="nickname" placeholder="Ник (только при регистрации)"/>
+    <div class="row">
+      <button id="btnLogin">Войти</button>
+      <button id="btnRegister">Регистрация</button>
+      <button id="btnClose">Закрыть</button>
+    </div>
+  </div>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>

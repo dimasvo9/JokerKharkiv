@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: joker-online-pro
+    env: node
+    rootDir: server
+    buildCommand: "npm install"
+    startCommand: "node server.js"
+    envVars:
+      - key: JWT_SECRET
+        generateValue: true
+      - key: APP_ORIGIN
+        value: "https://example.com"
